@@ -26,7 +26,7 @@ func CharSize(n int) string {
 	return fmt.Sprintf(GS+"\x21%v", n)
 }
 
-func ChnEncode(str String) String {
+func ChnEncode(str string) string {
 	chn, err := simplifiedchinese.GB18030.NewEncoder().String(str)
 	if err != nil {
 		log.Println(err)
